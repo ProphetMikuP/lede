@@ -1226,7 +1226,7 @@ jobs:
       - name: Deliver firmware
         uses: actions/upload-artifact@v2
         with:
-          name: OpenWrt_firmware
+          name: OpenWrt_Newifi_D2_firmware
           path: ./bin/targets/
 
       - name: Upload release asset
