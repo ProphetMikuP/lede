@@ -12,7 +12,7 @@ name: OpenWrt-CI
 on:
   push:
     branches: 
-      - master
+      - Newifi-D2
   schedule:
       - cron: 0 20 * * *
   release:
@@ -33,7 +33,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          ref: master
+          ref: Newifi-D2
 
       - name: Space cleanup
         env:
@@ -92,9 +92,10 @@ jobs:
           
           CONFIG_MODULES=y
           CONFIG_HAVE_DOT_CONFIG=y
-          CONFIG_TARGET_x86=y
-          CONFIG_TARGET_x86_64=y
-          CONFIG_TARGET_x86_64_DEVICE_generic=y
+          CONFIG_TARGET_ramips=y
+          CONFIG_TARGET_ramips_mt7621=y
+          CONFIG_TARGET_ramips_mt7621_DEVICE_d-team_newifi-d2=y
+          
           CONFIG_HAS_SUBTARGETS=y
           CONFIG_HAS_DEVICES=y
           CONFIG_TARGET_BOARD="x86"
@@ -1480,7 +1481,7 @@ jobs:
       - name: Deliver firmware
         uses: actions/upload-artifact@v2
         with:
-          name: OpenWrt_firmware
+          name: OpenWrt_Newifi_D2_firmware
           path: ./bin/targets/
 
       - name: Upload release asset
