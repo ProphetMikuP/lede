@@ -682,6 +682,14 @@ jobs:
           CONFIG_PACKAGE_kmod-fs-ext4=y
           CONFIG_PACKAGE_kmod-fs-f2fs=y
           CONFIG_PACKAGE_kmod-fs-vfat=y
+          
+          CONFIG_PACKAGE_kmod-fs-nfs=y
+          CONFIG_PACKAGE_kmod-fs-nfs-common=y
+          CONFIG_PACKAGE_kmod-fs-nfs-v3=y
+          CONFIG_PACKAGE_kmod-fs-nfs-v4=y
+          CONFIG_PACKAGE_kmod-fs-ntfs=y
+          CONFIG_PACKAGE_kmod-fs-squashfs=y
+          
           CONFIG_PACKAGE_kmod-hwmon-core=y
           CONFIG_PACKAGE_kmod-i2c-algo-bit=y
           CONFIG_PACKAGE_kmod-i2c-core=y
